@@ -1,0 +1,6 @@
+artifact_location: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/mlruns/814762403330889930
+creation_time: 1755918221943
+experiment_id: '814762403330889930'
+last_update_time: 1755918221943
+lifecycle_stage: active
+name: http://127.0.0.1:5000/

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/mlruns/479034813650608933/4e4b5a57f407413e98a442086d64be8e/artifacts
+end_time: 1755918222058
+entry_point_name: ''
+experiment_id: '479034813650608933'
+lifecycle_stage: active
+run_id: 4e4b5a57f407413e98a442086d64be8e
+run_name: trusting-gnu-813
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755918222052
+status: 3
+tags: []
+user_id: navdeepsingh
