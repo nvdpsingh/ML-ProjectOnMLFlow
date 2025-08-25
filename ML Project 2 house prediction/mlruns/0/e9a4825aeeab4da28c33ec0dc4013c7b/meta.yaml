@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/ML%20Project%202%20house%20prediction/mlruns/0/e9a4825aeeab4da28c33ec0dc4013c7b/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e9a4825aeeab4da28c33ec0dc4013c7b
+run_name: dazzling-bat-841
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756156596007
+status: 1
+tags: []
+user_id: navdeepsingh

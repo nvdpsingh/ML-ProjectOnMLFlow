@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/ML%20Project%202%20house%20prediction/mlruns/0/3cfb89f304a8491cbe0949ce71465952/artifacts
+end_time: 1756083189878
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3cfb89f304a8491cbe0949ce71465952
+run_name: languid-donkey-979
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756083189873
+status: 4
+tags: []
+user_id: navdeepsingh

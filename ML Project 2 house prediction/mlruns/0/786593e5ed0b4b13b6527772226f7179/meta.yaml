@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/ML%20Project%202%20house%20prediction/mlruns/0/786593e5ed0b4b13b6527772226f7179/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 786593e5ed0b4b13b6527772226f7179
+run_name: adventurous-stag-231
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756156740504
+status: 1
+tags: []
+user_id: navdeepsingh
