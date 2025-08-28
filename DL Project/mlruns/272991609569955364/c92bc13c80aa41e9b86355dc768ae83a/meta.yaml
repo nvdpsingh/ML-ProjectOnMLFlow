@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/c92bc13c80aa41e9b86355dc768ae83a/artifacts
+end_time: 1756349851336
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: c92bc13c80aa41e9b86355dc768ae83a
+run_name: melodic-goose-292
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756349850998
+status: 4
+tags: []
+user_id: navdeepsingh
