@@ -70,6 +70,14 @@ else
     echo "⚠️  test_streamlit.py not found. Skipping tests."
 fi
 
+# Test wine predictions specifically
+echo "🍷 Testing wine quality predictions..."
+if [ -f "test_predictions.py" ]; then
+    python test_predictions.py
+else
+    echo "⚠️  test_predictions.py not found. Skipping prediction tests."
+fi
+
 echo ""
 echo "🚀 Setup complete! To run the Streamlit app:"
 echo "   source venv/bin/activate"
@@ -81,3 +89,5 @@ echo "💡 Tips:"
 echo "   - Keep the terminal open while using the app"
 echo "   - Use Ctrl+C to stop the app"
 echo "   - Check the sidebar for navigation options"
+echo "   - Try the sample wines in the Model Predictor page"
+echo "   - Use the Quick Testing section on the Home page"

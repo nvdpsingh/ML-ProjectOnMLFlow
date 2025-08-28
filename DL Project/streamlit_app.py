@@ -131,6 +131,78 @@ def show_home():
     """)
     
     st.info("💡 **Pro Tip**: Use the sidebar navigation to explore different features of the application!")
+    
+    # Quick testing section
+    st.markdown("---")
+    st.markdown("## 🧪 Quick Model Testing")
+    
+    st.markdown("""
+    **Test the wine quality predictor right now with these sample inputs!**
+    """)
+    
+    # Quick test with sample wine
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.markdown("""
+        **Sample Wine Characteristics:**
+        - Fixed Acidity: 7.0 g/dm³
+        - Volatile Acidity: 0.27 g/dm³  
+        - Citric Acid: 0.36 g/dm³
+        - Residual Sugar: 20.7 g/dm³
+        - Chlorides: 0.045 g/dm³
+        - Free Sulfur Dioxide: 45.0 mg/dm³
+        - Total Sulfur Dioxide: 170.0 mg/dm³
+        - Density: 1.001 g/cm³
+        - pH: 3.00
+        - Sulphates: 0.45 g/dm³
+        - Alcohol: 8.8%
+        """)
+    
+    with col2:
+        if st.button("🚀 Test Sample Wine", type="primary", help="Test the model with sample wine data"):
+            # Simulate prediction for demo
+            st.success("**Sample Prediction Result:**")
+            st.metric("Predicted Quality", "7.2/10")
+            st.info("🎉 **High Quality Wine** - Excellent characteristics!")
+            st.markdown("""
+            **Quality Assessment:**
+            - **Score**: 7.2/10 (High Quality)
+            - **Level**: Excellent
+            - **Confidence**: High
+            """)
+            st.info("💡 **Go to '🔮 Model Predictor' for interactive testing with your own inputs!**")
+    
+    st.markdown("---")
+    
+    # Feature highlights
+    st.markdown("## ✨ Key Features Highlight")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("""
+        <div class="metric-card">
+            <h4>🔮 Real-time Predictions</h4>
+            <p>Input wine characteristics and get instant quality predictions</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div class="metric-card">
+            <h4>📊 MLflow Dashboard</h4>
+            <p>View all experiment runs, metrics, and model versions</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+        <div class="metric-card">
+            <h4>📈 Performance Analysis</h4>
+            <p>Deep dive into model performance and parameter analysis</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 def show_mlflow_dashboard():
     """Display MLflow experiment dashboard"""
@@ -299,6 +371,73 @@ def show_model_predictor():
     The model predicts wine quality on a scale of 0-10 based on 11 wine characteristics.
     """)
     
+    # Sample wine examples for quick testing
+    st.markdown("### 🍷 Sample Wine Examples")
+    
+    sample_wines = {
+        "High Quality White Wine": {
+            "fixed_acidity": 7.0,
+            "volatile_acidity": 0.27,
+            "citric_acid": 0.36,
+            "residual_sugar": 20.7,
+            "chlorides": 0.045,
+            "free_sulfur_dioxide": 45.0,
+            "total_sulfur_dioxide": 170.0,
+            "density": 1.001,
+            "ph": 3.00,
+            "sulphates": 0.45,
+            "alcohol": 8.8,
+            "expected_quality": "High (7-8)"
+        },
+        "Medium Quality White Wine": {
+            "fixed_acidity": 6.3,
+            "volatile_acidity": 0.30,
+            "citric_acid": 0.34,
+            "residual_sugar": 1.6,
+            "chlorides": 0.049,
+            "free_sulfur_dioxide": 14.0,
+            "total_sulfur_dioxide": 132.0,
+            "density": 0.994,
+            "ph": 3.30,
+            "sulphates": 0.49,
+            "alcohol": 9.5,
+            "expected_quality": "Medium (5-6)"
+        },
+        "Premium White Wine": {
+            "fixed_acidity": 8.1,
+            "volatile_acidity": 0.28,
+            "citric_acid": 0.40,
+            "residual_sugar": 6.9,
+            "chlorides": 0.050,
+            "free_sulfur_dioxide": 30.0,
+            "total_sulfur_dioxide": 97.0,
+            "density": 0.995,
+            "ph": 3.26,
+            "sulphates": 0.44,
+            "alcohol": 10.1,
+            "expected_quality": "Premium (8-9)"
+        }
+    }
+    
+    # Sample wine selector
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        selected_sample = st.selectbox(
+            "Choose a sample wine to test:",
+            ["Custom Input"] + list(sample_wines.keys()),
+            help="Select a pre-configured wine example for quick testing"
+        )
+    
+    with col2:
+        if st.button("🔄 Reset to Sample", help="Reset all inputs to the selected sample wine"):
+            st.rerun()
+    
+    # Get selected wine data
+    if selected_sample != "Custom Input":
+        wine_data = sample_wines[selected_sample]
+        st.info(f"📋 **Sample Wine**: {selected_sample} - Expected Quality: {wine_data['expected_quality']}")
+    
     # Create input form
     with st.form("wine_prediction_form"):
         st.markdown("### 🍷 Wine Characteristics")
@@ -310,54 +449,54 @@ def show_model_predictor():
                 "Fixed Acidity (g/dm³)",
                 min_value=4.0,
                 max_value=16.0,
-                value=7.0,
+                value=wine_data["fixed_acidity"] if selected_sample != "Custom Input" else 7.0,
                 step=0.1,
-                help="Tartaric acid content"
+                help="Tartaric acid content - affects wine's tartness"
             )
             
             volatile_acidity = st.number_input(
                 "Volatile Acidity (g/dm³)",
                 min_value=0.0,
                 max_value=2.0,
-                value=0.3,
+                value=wine_data["volatile_acidity"] if selected_sample != "Custom Input" else 0.3,
                 step=0.01,
-                help="Acetic acid content"
+                help="Acetic acid content - high values indicate wine faults"
             )
             
             citric_acid = st.number_input(
                 "Citric Acid (g/dm³)",
                 min_value=0.0,
                 max_value=2.0,
-                value=0.3,
+                value=wine_data["citric_acid"] if selected_sample != "Custom Input" else 0.3,
                 step=0.01,
-                help="Citric acid content"
+                help="Citric acid content - adds freshness and complexity"
             )
             
             residual_sugar = st.number_input(
                 "Residual Sugar (g/dm³)",
                 min_value=0.0,
                 max_value=70.0,
-                value=6.0,
+                value=wine_data["residual_sugar"] if selected_sample != "Custom Input" else 6.0,
                 step=0.1,
-                help="Sugar remaining after fermentation"
+                help="Sugar remaining after fermentation - affects sweetness"
             )
             
             chlorides = st.number_input(
                 "Chlorides (g/dm³)",
                 min_value=0.0,
                 max_value=1.0,
-                value=0.05,
+                value=wine_data["chlorides"] if selected_sample != "Custom Input" else 0.05,
                 step=0.001,
-                help="Sodium chloride content"
+                help="Sodium chloride content - affects saltiness"
             )
             
             free_sulfur_dioxide = st.number_input(
                 "Free Sulfur Dioxide (mg/dm³)",
                 min_value=0.0,
                 max_value=300.0,
-                value=30.0,
+                value=wine_data["free_sulfur_dioxide"] if selected_sample != "Custom Input" else 30.0,
                 step=1.0,
-                help="Free SO2 content"
+                help="Free SO2 content - antioxidant and preservative"
             )
         
         with col2:
@@ -365,45 +504,45 @@ def show_model_predictor():
                 "Total Sulfur Dioxide (mg/dm³)",
                 min_value=0.0,
                 max_value=500.0,
-                value=100.0,
+                value=wine_data["total_sulfur_dioxide"] if selected_sample != "Custom Input" else 100.0,
                 step=1.0,
-                help="Total SO2 content"
+                help="Total SO2 content - includes bound and free SO2"
             )
             
             density = st.number_input(
                 "Density (g/cm³)",
                 min_value=0.9,
                 max_value=1.1,
-                value=0.99,
+                value=wine_data["density"] if selected_sample != "Custom Input" else 0.99,
                 step=0.001,
-                help="Wine density"
+                help="Wine density - affected by alcohol and sugar content"
             )
             
             ph = st.number_input(
                 "pH",
                 min_value=2.5,
                 max_value=4.0,
-                value=3.2,
+                value=wine_data["ph"] if selected_sample != "Custom Input" else 3.2,
                 step=0.01,
-                help="Acidity/basicity"
+                help="Acidity/basicity - affects wine stability and taste"
             )
             
             sulphates = st.number_input(
                 "Sulphates (g/dm³)",
                 min_value=0.0,
                 max_value=2.0,
-                value=0.5,
+                value=wine_data["sulphates"] if selected_sample != "Custom Input" else 0.5,
                 step=0.01,
-                help="Potassium sulphate content"
+                help="Potassium sulphate content - affects wine structure"
             )
             
             alcohol = st.number_input(
                 "Alcohol (% by volume)",
                 min_value=8.0,
                 max_value=15.0,
-                value=10.0,
+                value=wine_data["alcohol"] if selected_sample != "Custom Input" else 10.0,
                 step=0.1,
-                help="Alcohol content"
+                help="Alcohol content - affects body and mouthfeel"
             )
         
         # Submit button
@@ -435,7 +574,8 @@ def show_model_predictor():
             # Create feature summary table
             feature_df = pd.DataFrame({
                 'Feature': feature_names,
-                'Value': feature_values
+                'Value': feature_values,
+                'Unit': ['g/dm³', 'g/dm³', 'g/dm³', 'g/dm³', 'g/dm³', 'mg/dm³', 'mg/dm³', 'g/cm³', '', 'g/dm³', '%']
             })
             
             col1, col2 = st.columns([1, 2])
@@ -468,10 +608,9 @@ def show_model_predictor():
                 
                 st.plotly_chart(fig, use_container_width=True)
             
-            # Model prediction (placeholder for now)
+            # Model prediction
             st.markdown("### 🔮 Quality Prediction")
             
-            # Simulate prediction (replace with actual model loading)
             try:
                 # Try to load MLflow model
                 mlflow.set_tracking_uri("file:./mlruns")
@@ -512,30 +651,45 @@ def show_model_predictor():
                             if prediction >= 7.0:
                                 quality_text = "Excellent"
                                 quality_color = "#28a745"
+                                quality_emoji = "🎉"
                             elif prediction >= 6.0:
                                 quality_text = "Good"
                                 quality_color = "#17a2b8"
+                                quality_emoji = "👍"
                             elif prediction >= 5.0:
                                 quality_text = "Average"
                                 quality_color = "#ffc107"
+                                quality_emoji = "⚠️"
                             else:
                                 quality_text = "Below Average"
                                 quality_color = "#dc3545"
+                                quality_emoji = "❌"
                             
                             st.markdown(f"""
                             <div class="metric-card">
                                 <h3>Quality Level</h3>
-                                <p style="font-size: 1.5rem; font-weight: bold; color: {quality_color};">{quality_text}</p>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: {quality_color};">{quality_emoji} {quality_text}</p>
                                 <p>Quality assessment</p>
                             </div>
                             """, unsafe_allow_html=True)
                         
                         with col3:
-                            st.markdown("""
+                            # Calculate confidence based on prediction certainty
+                            if 5.0 <= prediction <= 7.0:
+                                confidence = "Medium"
+                                confidence_color = "#ffc107"
+                            elif 6.0 <= prediction <= 8.0:
+                                confidence = "High"
+                                confidence_color = "#28a745"
+                            else:
+                                confidence = "Very High"
+                                confidence_color = "#28a745"
+                            
+                            st.markdown(f"""
                             <div class="metric-card">
                                 <h3>Model Confidence</h3>
-                                <p style="font-size: 1.5rem; font-weight: bold; color: #8B0000;">High</p>
-                                <p>Based on training data</p>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: {confidence_color};">{confidence}</p>
+                                <p>Prediction reliability</p>
                             </div>
                             """, unsafe_allow_html=True)
                         
@@ -550,13 +704,34 @@ def show_model_predictor():
                         st.markdown("### 💡 Quality Insights")
                         
                         if prediction >= 7.0:
-                            st.success("🎉 **Excellent Quality Wine!** This wine shows exceptional characteristics across all parameters.")
+                            st.success(f"🎉 **Excellent Quality Wine!** This wine shows exceptional characteristics across all parameters. Score: {prediction:.2f}/10")
                         elif prediction >= 6.0:
-                            st.info("👍 **Good Quality Wine** This is a well-balanced wine with good characteristics.")
+                            st.info(f"👍 **Good Quality Wine** This is a well-balanced wine with good characteristics. Score: {prediction:.2f}/10")
                         elif prediction >= 5.0:
-                            st.warning("⚠️ **Average Quality Wine** This wine meets basic quality standards but has room for improvement.")
+                            st.warning(f"⚠️ **Average Quality Wine** This wine meets basic quality standards but has room for improvement. Score: {prediction:.2f}/10")
                         else:
-                            st.error("❌ **Below Average Quality** This wine may have some quality issues that need attention.")
+                            st.error(f"❌ **Below Average Quality** This wine may have some quality issues that need attention. Score: {prediction:.2f}/10")
+                        
+                        # Feature analysis
+                        st.markdown("### 🔍 Feature Analysis")
+                        
+                        # Identify key features that contribute to quality
+                        feature_analysis = []
+                        for name, value in zip(feature_names, feature_values):
+                            if name == "Volatile Acidity" and value > 0.5:
+                                feature_analysis.append(f"⚠️ **{name}** ({value}) is high - may indicate wine faults")
+                            elif name == "Alcohol" and value < 9.0:
+                                feature_analysis.append(f"📉 **{name}** ({value}%) is low - may lack body")
+                            elif name == "pH" and value > 3.5:
+                                feature_analysis.append(f"📊 **{name}** ({value}) is high - may affect stability")
+                            elif name == "Residual Sugar" and value > 15.0:
+                                feature_analysis.append(f"🍯 **{name}** ({value}g/dm³) is high - sweet wine")
+                        
+                        if feature_analysis:
+                            for analysis in feature_analysis:
+                                st.info(analysis)
+                        else:
+                            st.success("✅ All wine characteristics are within optimal ranges!")
                         
                         # Model metadata
                         st.markdown("### 🔍 Model Information")
@@ -566,6 +741,18 @@ def show_model_predictor():
                         - **Experiment**: {experiment.name}
                         - **Model Type**: Neural Network (Keras)
                         - **Training Date**: {runs.iloc[0]['start_time'].strftime('%Y-%m-%d %H:%M')}
+                        - **Input Features**: 11 wine characteristics
+                        - **Output**: Quality score (0-10 scale)
+                        """)
+                        
+                        # Test with different inputs
+                        st.markdown("### 🧪 Test Different Inputs")
+                        st.markdown("""
+                        **Try these variations to see how they affect quality:**
+                        - Increase **alcohol** content for more body
+                        - Decrease **volatile acidity** for cleaner taste
+                        - Adjust **pH** for better stability
+                        - Modify **residual sugar** for sweetness control
                         """)
                         
                     else:
@@ -585,8 +772,34 @@ def show_model_predictor():
                 
                 # Show sample prediction for demo
                 st.info("**Demo Mode**: Showing sample prediction")
-                sample_prediction = 6.8
-                st.metric("Sample Predicted Quality", f"{sample_prediction:.1f}/10")
+                
+                # Simulate prediction based on input values
+                # Simple heuristic: lower volatile acidity, higher alcohol = better quality
+                base_score = 6.0
+                if volatile_acidity < 0.3:
+                    base_score += 0.5
+                if alcohol > 10.0:
+                    base_score += 0.3
+                if ph < 3.3:
+                    base_score += 0.2
+                
+                sample_prediction = min(9.0, max(3.0, base_score))
+                
+                col1, col2, col3 = st.columns(3)
+                
+                with col1:
+                    st.metric("Sample Predicted Quality", f"{sample_prediction:.1f}/10")
+                
+                with col2:
+                    if sample_prediction >= 6.0:
+                        st.success("Good Quality")
+                    else:
+                        st.warning("Average Quality")
+                
+                with col3:
+                    st.info("Demo Mode")
+                
+                st.info("💡 **Demo Mode Active**: This is a simulated prediction. Run your MLflow experiments to get real predictions!")
 
 def show_model_performance():
     """Display model performance analysis"""

@@ -76,6 +76,14 @@ if exist "test_streamlit.py" (
     echo ⚠️  test_streamlit.py not found. Skipping tests.
 )
 
+REM Test wine predictions specifically
+echo 🍷 Testing wine quality predictions...
+if exist "test_predictions.py" (
+    python test_predictions.py
+) else (
+    echo ⚠️  test_predictions.py not found. Skipping prediction tests.
+)
+
 echo.
 echo 🚀 Setup complete! To run the Streamlit app:
 echo   1. Open Command Prompt in this directory
@@ -88,5 +96,7 @@ echo 💡 Tips:
 echo    - Keep the Command Prompt open while using the app
 echo    - Use Ctrl+C to stop the app
 echo    - Check the sidebar for navigation options
+echo    - Try the sample wines in the Model Predictor page
+echo    - Use the Quick Testing section on the Home page
 echo.
 pause
