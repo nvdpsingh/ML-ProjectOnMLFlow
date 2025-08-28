@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/3850b3627f5144ed8282475e831d8a10/artifacts
+end_time: 1756394116424
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 3850b3627f5144ed8282475e831d8a10
+run_name: bemused-bug-816
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394101458
+status: 3
+tags: []
+user_id: navdeepsingh

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/22549fa1356b4bbab8927ec3ac9eb1f0/artifacts
+end_time: 1756394124661
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 22549fa1356b4bbab8927ec3ac9eb1f0
+run_name: abundant-penguin-392
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394116451
+status: 3
+tags: []
+user_id: navdeepsingh

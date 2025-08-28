@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/36ca5cc154eb48eca871c972589d8727/artifacts
+end_time: 1756351083733
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 36ca5cc154eb48eca871c972589d8727
+run_name: bold-zebra-133
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756351083337
+status: 4
+tags: []
+user_id: navdeepsingh

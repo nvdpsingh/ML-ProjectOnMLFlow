@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/02f13c3d48a14b5ba701c768882f7b10/artifacts
+end_time: 1756350566934
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 02f13c3d48a14b5ba701c768882f7b10
+run_name: rumbling-hound-297
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756350566885
+status: 4
+tags: []
+user_id: navdeepsingh

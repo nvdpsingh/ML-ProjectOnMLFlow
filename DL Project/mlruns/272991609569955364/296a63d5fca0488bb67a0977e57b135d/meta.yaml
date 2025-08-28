@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/296a63d5fca0488bb67a0977e57b135d/artifacts
+end_time: 1756394482504
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 296a63d5fca0488bb67a0977e57b135d
+run_name: silent-stoat-993
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394474317
+status: 3
+tags: []
+user_id: navdeepsingh

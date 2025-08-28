@@ -1,0 +1,10 @@
+artifact_location: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/models/m-984f8b2a11fb4194ada48ab8f68d2f16/artifacts
+creation_timestamp: 1756394490516
+experiment_id: '272991609569955364'
+last_updated_timestamp: 1756394498080
+model_id: m-984f8b2a11fb4194ada48ab8f68d2f16
+model_type: ''
+name: model
+source_run_id: d76adc24d9334601b1f26bdd6057bc05
+status: 2
+status_message: null

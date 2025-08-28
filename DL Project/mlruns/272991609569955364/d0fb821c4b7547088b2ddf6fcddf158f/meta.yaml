@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/d0fb821c4b7547088b2ddf6fcddf158f/artifacts
+end_time: 1756394137615
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: d0fb821c4b7547088b2ddf6fcddf158f
+run_name: rambunctious-bug-849
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394088044
+status: 3
+tags: []
+user_id: navdeepsingh

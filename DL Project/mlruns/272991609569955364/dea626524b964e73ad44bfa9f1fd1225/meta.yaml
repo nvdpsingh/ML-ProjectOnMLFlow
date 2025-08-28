@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/dea626524b964e73ad44bfa9f1fd1225/artifacts
+end_time: 1756394490488
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: dea626524b964e73ad44bfa9f1fd1225
+run_name: crawling-loon-780
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394482533
+status: 3
+tags: []
+user_id: navdeepsingh

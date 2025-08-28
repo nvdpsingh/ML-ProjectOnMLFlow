@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/ca90851bfc6d4633b0f8628e6ed4a427/artifacts
+end_time: 1756394474286
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: ca90851bfc6d4633b0f8628e6ed4a427
+run_name: unleashed-hare-58
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394465637
+status: 3
+tags: []
+user_id: navdeepsingh

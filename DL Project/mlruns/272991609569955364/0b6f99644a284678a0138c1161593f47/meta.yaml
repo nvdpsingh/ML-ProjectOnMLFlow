@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/0b6f99644a284678a0138c1161593f47/artifacts
+end_time: 1756394465604
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 0b6f99644a284678a0138c1161593f47
+run_name: funny-shark-624
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394455560
+status: 3
+tags: []
+user_id: navdeepsingh

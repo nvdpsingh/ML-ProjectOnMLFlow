@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/bd68859c18b4492188e7935d56d52733/artifacts
+end_time: 1756394101319
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: bd68859c18b4492188e7935d56d52733
+run_name: bedecked-shark-134
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756394088335
+status: 3
+tags: []
+user_id: navdeepsingh

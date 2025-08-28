@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/7c342d36a29e4cef9ef73fed596057bc/artifacts
+end_time: 1756350647883
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 7c342d36a29e4cef9ef73fed596057bc
+run_name: classy-shoat-698
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756350647671
+status: 4
+tags: []
+user_id: navdeepsingh

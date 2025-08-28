@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/36e95a6e78654423b28116e059edad9f/artifacts
+end_time: 1756350431795
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 36e95a6e78654423b28116e059edad9f
+run_name: powerful-rat-630
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756350431429
+status: 4
+tags: []
+user_id: navdeepsingh

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/navdeepsingh/MLOPS%20Tut/MLFlowTut/DL%20Project/mlruns/272991609569955364/5754b71069254826b13ee39462c374a6/artifacts
+end_time: 1756350544356
+entry_point_name: ''
+experiment_id: '272991609569955364'
+lifecycle_stage: active
+run_id: 5754b71069254826b13ee39462c374a6
+run_name: incongruous-cat-13
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756350543802
+status: 4
+tags: []
+user_id: navdeepsingh
